@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Check if PDF is corrupt, PDF Validator",
   "main": "index.js",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "test": "jest --config jestconfig.json",
     "build": "tsc",
@@ -14,7 +16,7 @@
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
- },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/imtheknown/pdf-validator.git"
@@ -33,6 +35,10 @@
   },
   "homepage": "https://github.com/imtheknown/pdf-validator#readme",
   "devDependencies": {
+    "@types/jest": "^28.1.8",
+    "@types/node": "^18.7.13",
+    "jest": "^29.0.1",
+    "ts-jest": "^28.0.8",
     "typescript": "^4.8.2"
   }
 }
