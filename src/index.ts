@@ -1,6 +1,9 @@
 
 
 export function isValidBuffer(pdf: Buffer): boolean {
-    console.log(pdf);
-    return true;
+    return (Buffer.isBuffer(pdf) && pdf.lastIndexOf("%PDF-") === 0 && pdf.lastIndexOf("%%EOF") > -1) ? true : false;
+}
+
+export function getPdfVersion(pdf: Buffer): string {
+    return '';
 }
